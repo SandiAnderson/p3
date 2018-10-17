@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'RaceTimeController@welcome');
+
+Route::any('/calc', 'RaceTimeController@calcRace');
