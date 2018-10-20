@@ -1,0 +1,48 @@
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+h1 {
+    font-size: 150%;
+    color: darkslategray;
+}
+
+h2 {
+    font-size: 125%;
+    color: darkslategrey;
+}
+
+#calcForm {
+    background: url(/images/one.jpg) no-repeat,
+    url(/images/two.jpg) no-repeat,
+    url(/images/three.jpg) no-repeat,
+    url(/images/four.jpg) no-repeat;
+    background-position-x: right, right, right, right;
+    background-position-y: 0% ,25%, 50%, 75%;
+    background-size: 7%, 7%, 7%, 7%;
+    background-color: #e2eddc;
+}
+
+.elForm {
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+.req {
+    color: red;
+}
+
+.error {
+    padding: 10px;
+    background-color: peachpuff;
+}
+
+.time {
+    padding: 10px;
+    background-color: #40bf79;
+}

@@ -9,7 +9,7 @@ class RaceTimeController extends Controller
     //
     public function welcome()
     {
-        return 'search screen here';
+        return view('racetime.estimator');
     }
 
     public function calcRace()

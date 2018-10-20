@@ -9,7 +9,7 @@
 **
 
 ## Packages
-*barryvdh/laravel-debugbar*
+barryvdh/laravel-debugbar
 
 ## Code style divergences
 *none so far*
