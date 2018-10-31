@@ -12,8 +12,4 @@ class RaceTimeController extends Controller
         return view('racetime.estimator');
     }
 
-    public function calcRace()
-    {
-        return 'racetime calculation';
-    }
 }

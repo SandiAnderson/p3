@@ -12,5 +12,3 @@
 */
 
 Route::get('/', 'RaceTimeController@welcome');
-
-Route::any('/calc', 'RaceTimeController@calcRace');
