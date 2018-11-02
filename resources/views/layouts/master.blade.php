@@ -7,19 +7,17 @@
 </head>
 <body>
 
-<header>
-
-</header>
-
 <section>
-    <h1>Race Time Estimator</h1>
+    @include('layouts.header')
 </section>
+
 <section>
     @yield('content')
 </section>
 
 
 <footer>
+    <hr>
     &copy; {{ date('Y') }}
 </footer>
 

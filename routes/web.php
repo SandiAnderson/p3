@@ -12,3 +12,8 @@
 */
 
 Route::get('/', 'RaceTimeController@welcome');
+
+Route::get('/estimate', 'RaceTimeController@estimate');
+
+Route::get('/calc','RaceTimeController@calculate');
+

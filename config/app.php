@@ -2,6 +2,21 @@
 
 return [
 
+    'calcvalues' => [
+        'fivek' => '3.2',
+        'half' => '13.1',
+        'full' => '26.2',
+        'hill' => '.15.',
+        'elevate' => '.25',
+        'obstacle' => '.35',
+        'training' => '.25'
+    ],
+
+    'nav' => [
+        ['link'=>'/', 'label'=>'Home', 'description'=>''],
+        ['link'=>'/estimate','label'=> 'Estimator','description' => 'Estimate your Race Finish time based on your your current pace']
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

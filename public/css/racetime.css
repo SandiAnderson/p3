@@ -16,33 +16,52 @@ h2 {
     color: darkslategrey;
 }
 
-#calcForm {
-    background: url(/images/one.jpg) no-repeat,
-    url(/images/two.jpg) no-repeat,
-    url(/images/three.jpg) no-repeat,
-    url(/images/four.jpg) no-repeat;
-    background-position-x: right, right, right, right;
-    background-position-y: 0% ,25%, 50%, 75%;
-    background-size: 7%, 7%, 7%, 7%;
-    background-color: #e2eddc;
+.defForm {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    border-color: #1d643b;
+    padding: 10px;
+    margin: 10px;
 }
 
 .elForm {
     padding: 10px;
-    height: 30px;
     width: 100%;
 }
 
+.nav {
+    height: 80px;
+    alignment: bottom;
+    background-color: #e2eddc;
+    padding: 20px;
+}
+
+.nav a {
+    padding-right: 10px;
+    color: #1d643b;
+}
 .req {
     color: red;
+    font-size: 75%;
 }
 
 .error {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    border-color: #e3342f;
     padding: 10px;
-    background-color: peachpuff;
+    margin: 10px;
+    background-color: #f7c6c5;
 }
 
 .time {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    border-color: #1d643b;
     padding: 10px;
-    background-color: #40bf79;
+    margin: 10px;
+    background-color: #98e1b7;
 }

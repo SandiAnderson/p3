@@ -3,8 +3,8 @@
 + Production URL: <http://p3.dcyc.club>
 
 ## Outside resources
-*Your list of outside resources go here*
-
++ Reference for accessing array: <https://www.w3schools.com/php/php_arrays.asp>
++ Referencing multi-dimensional arrays in Laravel Blade: <https://laravel.io/forum/07-16-2014-iterate-over-multidimensional-object-with-blade>
 ## 3 Unique inputs
 **
 
