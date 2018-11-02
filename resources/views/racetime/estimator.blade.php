@@ -8,14 +8,14 @@
         <form method="get" action="/calc">
 
             <div class='elForm'>Current Mile Pace:&nbsp;
-                <label>Minutes: <input type="number" name="minutes" min="0" max="60"
+                <label>Minutes <input type="number" name="minutes" min="0" max="60"
                            value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes']) size="2">
                 </label>
-                <label>Seconds:<input type="number" name="seconds" min="0" max="60"
+                <label>Seconds <input type="number" name="seconds" min="0" max="60"
                            value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds']) size="2">
                 </label></div>
 
-            <div class='elForm'><label>Distance - make this a check box
+            <div class='elForm'><label>Distance:
                     <select name="distance">
                         <option value="" @include('modules.displayvalue', ['type'=>'select', 'source'=>'distance', 'value'=>''])>
                             Select One
@@ -31,7 +31,7 @@
                         </option>
                     </select>
                 </label></div>
-            <div class='elForm'><label>Endurance
+            <div class='elForm'><label>Endurance:
                     <select name="endurance">
                         <option value="" @include('modules.displayvalue', ['type'=>'select', 'source'=>'endurance', 'value'=>''])>
                             Select One
