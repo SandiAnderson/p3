@@ -8,19 +8,19 @@ body {
 
 h1 {
     font-size: 150%;
-    color: darkslategray;
+    color: #f6c365;
 }
 
 h2 {
     font-size: 125%;
-    color: darkslategrey;
+    color: #f6c365;
 }
 
 .defForm {
     border-style: solid;
     border-width: thin;
     border-radius: 20px;
-    border-color: #1d643b;
+    border-color: #5d561b;
     padding: 10px;
     margin: 10px;
 }
@@ -33,14 +33,19 @@ h2 {
 .nav {
     height: 80px;
     alignment: bottom;
-    background-color: #e2eddc;
+    background-color: #7c511e;
+    background-image: url("/images/running-runner-long-distance-fitness-40751.jpeg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 100%;
     padding: 20px;
 }
 
 .nav a {
     padding-right: 10px;
-    color: #1d643b;
+    color: #fffbdb;
 }
+
 .req {
     color: red;
     font-size: 75%;
@@ -56,12 +61,16 @@ h2 {
     background-color: #f7c6c5;
 }
 
+.error li {
+    list-style: none;
+}
+
 .time {
     border-style: solid;
     border-width: thin;
     border-radius: 20px;
-    border-color: #1d643b;
+    border-color: #7c511e;
     padding: 10px;
     margin: 10px;
-    background-color: #d7f3e3;
+    background-color: #fffbdb;
 }
