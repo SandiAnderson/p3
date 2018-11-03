@@ -69,9 +69,10 @@ class RaceTimeController extends Controller
             $time = $time - ($time * (config('app.calcvalues.training')));
         }
 
+
         #update session with the estimated time
         return redirect('/estimate')->with([
-            'time' => $time,
+            'time' => floatval($time),
             'minutes' => $minutes,
             'seconds' => $seconds,
             'endurance' => $endurance,
