@@ -17,3 +17,7 @@ Route::get('/estimate', 'RaceTimeController@estimate');
 
 Route::get('/calc','RaceTimeController@calculate');
 
+Route::get('/planner', 'RaceTimeController@planner');
+
+Route::get('/plan','RaceTimeController@plan');
+

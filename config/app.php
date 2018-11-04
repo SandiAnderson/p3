@@ -13,8 +13,9 @@ return [
     ],
 
     'nav' => [
-        ['link'=>'/', 'label'=>'Home', 'description'=>''],
-        ['link'=>'/estimate','label'=> 'Estimator','description' => 'Estimate your Race Finish time based on your your current pace']
+        ['link' => '/', 'label' => 'Home', 'description' => ''],
+        ['link' => '/estimate', 'label' => 'Estimator', 'description' => 'Estimate your Race Finish time based on your your current pace'],
+        ['link' => '/planner', 'label' => 'Planner', 'description' => 'Plan your incremental training improvement to meet your target pace']
     ],
 
     /*

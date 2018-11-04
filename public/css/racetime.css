@@ -6,14 +6,18 @@ body {
     margin-right: 25%;
 }
 
+a {
+    color: #7c511e;
+}
+
 h1 {
     font-size: 150%;
-    color: #f6c365;
+    color: #fffbdb;
 }
 
 h2 {
     font-size: 125%;
-    color: #f6c365;
+    color: #fffbdb;
 }
 
 .defForm {

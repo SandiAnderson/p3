@@ -2,17 +2,17 @@
 
 @section('content')
     <div class="defForm">
-        <p>Use this calculator estimate your anticipated race finish time based on your current pace
-            and the type and distance of race you will be running.<br>
+        <p>Use this calculator to estimate your race finish time based on your current pace
+            and the type of race you will be running.<br>
             <span class="req">*All values are required.</span></p>
         <form method="get" action="/calc">
 
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type="number" name="minutes" min="0" max="60"
-                           value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes']) size="2">
+                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes']) size="2">
                 </label>
                 <label>Seconds <input type="number" name="seconds" min="0" max="60"
-                           value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds']) size="2">
+                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds']) size="2">
                 </label></div>
 
             <div class='elForm'><label>Distance:
@@ -76,7 +76,7 @@
         </div>
     @else
         @if(session('time'))
-            <div class='time'>Your anticipated completion time is {{session('time')}} minutes</div>
+            <div class='time'>Your anticipated completion time is {{session('ftime')}}</div>
         @endif
 
     @endif
