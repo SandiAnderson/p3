@@ -9,10 +9,10 @@
 
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type="number" name="minutes" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes']) size="2">
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes'])" size="2">
                 </label>
                 <label>Seconds <input type="number" name="seconds" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds']) size="2">
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds'])" size="2">
                 </label></div>
 
             <div class='elForm'><label>Distance:
@@ -75,7 +75,7 @@
             </ul>
         </div>
     @else
-        @if(session('time'))
+        @if(session('ftime'))
             <div class='time'>Your anticipated completion time is {{session('ftime')}}</div>
         @endif
 

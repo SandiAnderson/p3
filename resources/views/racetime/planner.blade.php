@@ -9,24 +9,28 @@
 
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type="number" name="currentmin" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentmin']) size="2">
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentmin'])"
+                                      size="2">
                 </label>
                 <label>Seconds <input type="number" name="currentsec" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentsec']) size="2">
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentsec'])"
+                                      size="2">
                 </label></div>
 
             <div class='elForm'>Target Mile Pace:&nbsp;
                 <label>Minutes <input type="number" name="targetmin" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'targetmin']) size="2">
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentsec'])"
+                                      size="2">
                 </label>
                 <label>Seconds <input type="number" name="targetsec" min="0" max="60"
-                                      value=@include('modules.displayvalue', ['type'=>'number', 'source'=>'targetsec']) size="2">
+                                      value='@include('modules.displayvalue', ['type'=>'number', 'source'=>'targetsec'])'
+                                      size="2">
                 </label></div>
 
             <div class='elForm'>
                 <label>When is your race?&nbsp;
                     <input type="date" name="racedate"
-                           value=@include('modules.displayvalue', ['type'=>'radio', 'source'=>'training', 'value'=>'yes'])>
+                           value="@include('modules.displayvalue', ['type'=>'date', 'source'=>'racedate'])">
                 </label>
             </div>
 
@@ -49,7 +53,9 @@
     @else
         @if(session('improve'))
             <div class='time'>To reach your target pace, you need to improve your time by {{session('improve')}} per
-                mile.
+                mile.<br>
+                To make this pace by {{session('racedate')}}, you will need to improve by {{session('fincimprove')}} per
+                week.
             </div>
         @endif
 

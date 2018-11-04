@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Nullable;
+use Cake\Chronos\Chronos;
 
 class RaceTimeController extends Controller
 {
@@ -101,13 +102,14 @@ class RaceTimeController extends Controller
             'currentsec' => 'required|numeric|min:0|max:60',
             'targetmin' => 'required|numeric|min:0|max:60',
             'targetsec' => 'required|numeric|min:0|max:60',
-            'racedate' => 'required',
+            'racedate' => 'required|date|after:next week',
         ]);
 
         $currentmin = (int)$request->currentmin;
         $currentsec = (int)$request->currentsec;
         $targetmin = (int)$request->targetmin;
         $targetsec = (int)$request->targetsec;
+        $racedate = $request->racedate;
 
 
         //get the difference between current and target pace
@@ -119,9 +121,12 @@ class RaceTimeController extends Controller
 
 
         //get the number of weeks
+        $today = today();
+        $goal = $today -> diffInWeeks($racedate);
 
         //divide improvement pace by number of weeks
-
+        $incimprove = $improve/$goal;
+        $fincimprove = sprintf('%02d:%02d', floor($incimprove / 60) % 60, ($incimprove % 60));
 
         #update planner with the improvement calculation
         return redirect('/planner')->with([
@@ -129,7 +134,10 @@ class RaceTimeController extends Controller
             'currentsec' => $currentsec,
             'targetmin' => $targetmin,
             'targetsec' => $targetsec,
-            'improve' => $fimprove
+            'improve' => $fimprove,
+            'racedate' => $racedate,
+            'goal' => $goal,
+            'fincimprove' => $fincimprove
         ]);
 
     }
