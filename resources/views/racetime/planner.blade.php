@@ -19,7 +19,7 @@
 
             <div class='elForm'>Target Mile Pace:&nbsp;
                 <label>Minutes <input type="number" name="targetmin" min="0" max="60"
-                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'currentsec'])"
+                                      value="@include('modules.displayvalue', ['type'=>'number', 'source'=>'targetmin'])"
                                       size="2">
                 </label>
                 <label>Seconds <input type="number" name="targetsec" min="0" max="60"
