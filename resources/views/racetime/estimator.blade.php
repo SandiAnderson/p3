@@ -2,9 +2,9 @@
 
 @section('content')
     <div class='defForm'>
-        <p>Use this calculator to estimate your race finish time based
-            on your current pace and the type of race you will be running.<br>
-            <span class='req'>*All values are required.</span></p>
+        <h4>Use this calculator to estimate your race finish time based
+            on your current pace and the type of race you will be running.</h4>
+            <p><span class='req'>*All values are required.</span></p>
         <form method='get' action='/calc'>
 
             <div class='elForm'>Current Mile Pace:&nbsp;

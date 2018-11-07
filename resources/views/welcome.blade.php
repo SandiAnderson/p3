@@ -2,7 +2,7 @@
 
 @section('content')
     <div class='defForm'>
-        Welcome to the Race Training Planner.<br>
+        <h4>Welcome to the Race Training Planner.</h4>
         There's not much here now, but you can:
         <ul>
             @foreach(config('app.nav') as $navitem)

@@ -2,9 +2,9 @@
 
 @section('content')
     <div class='defForm'>
-        <p>Use this planner to estimate your target incremental improvement each
-            week in order to meet your race pace time goal.<br>
-            <span class='req'>*All values are required.</span></p>
+        <h4>Use this planner to estimate your target incremental improvement each
+            week in order to meet your race pace time goal.</h4>
+            <p><span class='req'>*All values are required.</span></p>
         <form method='get' action='/plan'>
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type='number' name='minutes' min='0' max='60' size='2'
