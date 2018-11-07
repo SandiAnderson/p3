@@ -23,7 +23,7 @@ class RaceTimeController extends Controller
     public function calculate(Request $request)
     {
         $request->validate([
-            'minutes' => 'required|numeric|min:0|max:60',
+            'minutes' => 'required|numeric|min:1|max:60',
             'seconds' => 'required|numeric|min:0|max:60',
             'distance' => 'required',
             'endurance' => 'required',
@@ -81,13 +81,13 @@ class RaceTimeController extends Controller
         #update estimator with the estimated time using flash data
         return redirect('/estimate')->with([
             'ftime' => ($ftime),
+            //'minutes' => $minutes,
+            //'seconds' => $seconds,
             'endurance' => $endurance,
             'distance' => $distance,
             'elevation' => $elevation,
             'training' => $training
         ]);
-
-
     }
 
 
@@ -99,15 +99,15 @@ class RaceTimeController extends Controller
     public function plan(Request $request)
     {
         $request->validate([
-            'currentmin' => 'required|numeric|min:0|max:60',
-            'currentsec' => 'required|numeric|min:0|max:60',
-            'targetmin' => 'required|numeric|min:0|max:60',
+            'minutes' => 'required|numeric|min:1|max:60',
+            'seconds' => 'required|numeric|min:0|max:60',
+            'targetmin' => 'required|numeric|min:1|max:60',
             'targetsec' => 'required|numeric|min:0|max:60',
             'racedate' => 'bail|required|date|after:next week',
         ]);
 
-        $currentmin = (int)$request->currentmin;
-        $currentsec = (int)$request->currentsec;
+        $currentmin = (int)$request->minutes;
+        $currentsec = (int)$request->seconds;
         $targetmin = (int)$request->targetmin;
         $targetsec = (int)$request->targetsec;
         $racedate = $request->racedate;
@@ -131,8 +131,8 @@ class RaceTimeController extends Controller
 
         #update planner with the improvement calculation
         return redirect('/planner')->with([
-            'currentmin' => $currentmin,
-            'currentsec' => $currentsec,
+            'minutes' => $currentmin,
+            'seconds' => $currentsec,
             'targetmin' => $targetmin,
             'targetsec' => $targetsec,
             'improve' => $fimprove,

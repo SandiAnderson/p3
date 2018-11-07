@@ -1,12 +1,12 @@
 @if($type=='number')
-    @if(session($source)) value='{{session($source)}}'
-    @elseif(old($source))  value='{{old($source)}}'
+    @if(old($source))  value='{{old($source)}}'
+    @elseif(session($source)) value='{{session($source)}}'
     @else value='0'
     @endif
 @elseif($type=='text')
-    @if(session($source)) value='{{session($source)}}'
-    @elseif(old($source)) value='{{old($source)}}'
-        @else value='MM/DD/YYYY'
+    @if(old($source)) value='{{old($source)}}'
+    @elseif(session($source)) value='{{session($source)}}'
+    @else value='MM/DD/YYYY'
     @endif
 @elseif($type=='select')
     @if(session($source) == $value || old($source) == $value)selected @endif
