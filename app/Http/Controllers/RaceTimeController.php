@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use phpDocumentor\Reflection\Types\Nullable;
 use Cake\Chronos\Chronos;
 
@@ -70,16 +71,16 @@ class RaceTimeController extends Controller
             $time = $time - ($time * (config('app.calcvalues.training')));
         }
 
-
         //convert seconds to hour:min:sec
         $ftime = sprintf('%02d:%02d:%02d', floor($time / 3600), floor($time / 60) % 60, ($time % 60));
 
+        //Store current pace in session for use in planner
+        session(['minutes' => $minutes]);
+        session (['seconds' => $seconds]);
 
-        #update estimator with the estimated time
+        #update estimator with the estimated time using flash data
         return redirect('/estimate')->with([
             'ftime' => ($ftime),
-            'minutes' => $minutes,
-            'seconds' => $seconds,
             'endurance' => $endurance,
             'distance' => $distance,
             'elevation' => $elevation,
@@ -102,7 +103,7 @@ class RaceTimeController extends Controller
             'currentsec' => 'required|numeric|min:0|max:60',
             'targetmin' => 'required|numeric|min:0|max:60',
             'targetsec' => 'required|numeric|min:0|max:60',
-            'racedate' => 'required|date|after:next week',
+            'racedate' => 'bail|required|date|after:next week',
         ]);
 
         $currentmin = (int)$request->currentmin;

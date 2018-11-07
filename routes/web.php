@@ -21,3 +21,6 @@ Route::get('/planner', 'RaceTimeController@planner');
 
 Route::get('/plan','RaceTimeController@plan');
 
+Route::fallback(function () {
+    return view('welcome');
+});

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="defForm">
+    <div class='defForm'>
         Welcome to the Race Training Planner.<br>
         There's not much here now, but you can:
         <ul>

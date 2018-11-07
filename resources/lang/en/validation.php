@@ -145,7 +145,7 @@ return [
         'minutes' => 'Current Mile Pace: Minute',
         'seconds' => 'Current Mile Pace: Second',
         'distance' => 'Distance',
-        'endurance' => 'Endurance',
+        'endurance' => 'Course Type',
         'training' => 'Are you Training',
         'currentmin' => 'Current Mile Pace: Minute',
         'currentsec' => 'Current Mile Pace: Second',
