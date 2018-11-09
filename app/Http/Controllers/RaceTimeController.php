@@ -79,14 +79,8 @@ class RaceTimeController extends Controller
         session (['seconds' => $seconds]);
 
         #update estimator with the estimated time using flash data
-        return redirect('/estimate')->with([
+        return redirect('/estimate')->withInput()->with([
             'ftime' => ($ftime),
-            //'minutes' => $minutes,
-            //'seconds' => $seconds,
-            'endurance' => $endurance,
-            'distance' => $distance,
-            'elevation' => $elevation,
-            'training' => $training
         ]);
     }
 
@@ -130,13 +124,8 @@ class RaceTimeController extends Controller
         $fincimprove = sprintf('%02d:%02d', floor($incimprove / 60) % 60, ($incimprove % 60));
 
         #update planner with the improvement calculation
-        return redirect('/planner')->with([
-            'minutes' => $currentmin,
-            'seconds' => $currentsec,
-            'targetmin' => $targetmin,
-            'targetsec' => $targetsec,
+        return redirect('/planner')->withInput()->with([
             'improve' => $fimprove,
-            'racedate' => $racedate,
             'goal' => $goal,
             'fincimprove' => $fincimprove
         ]);
