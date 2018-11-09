@@ -9,7 +9,7 @@
 
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type='number' name='minutes' min='0' max='60' size='2'
-                                      @include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes'])>
+                            @include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds'])>
                 </label>
                 <label>Seconds <input type='number' name='seconds' min='0' max='60' size='2'
                                       @include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds'])>
