@@ -39,3 +39,5 @@ and <https://stackoverflow.com/questions/3172332/convert-seconds-to-hourminutese
   * Reseting the values on the forms is done in the displayvalue view as some
    of the logic was repetative and became lengthy for setting default and zero
     values within the form itself.
+      * Validation was updated to by simplier, kept the include
+      as if made it easy to update all instances of validation at once.
