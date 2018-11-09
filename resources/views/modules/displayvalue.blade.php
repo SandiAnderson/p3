@@ -1,7 +1,7 @@
 @if($type=='number')
-    value='{{old($source) ?? (isset($source)? session($source):'0') }}'
+    value='{{(isset($source)? session($source):'0')?? old($source,'0') }}'
 @elseif($type=='text')
-    value='{{old($source,'MM/DD/YYYY')}}'
+    value='{{(isset($source)? session($source):'MM/DD/YYYY')?? old($source, 'MM/DD/YYYY') }}'
 @elseif($type=='select')
     {{ old($source, session($source)) == $value ? 'selected' : '' }}
 @elseif($type=='radio')

@@ -4,28 +4,28 @@
     <div class='defForm'>
         <h4>Use this planner to estimate your target incremental improvement each
             week in order to meet your race pace time goal.</h4>
-            <p><span class='req'>*All values are required.</span></p>
+        <p><span class='req'>*All values are required.</span></p>
         <form method='get' action='/plan'>
             <div class='elForm'>Current Mile Pace:&nbsp;
                 <label>Minutes <input type='number' name='minutes' min='0' max='60' size='2'
-                                      @include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes'])>
+                            @include('modules.displayvalue', ['type'=>'number', 'source'=>'minutes'])>
                 </label>
                 <label>Seconds <input type='number' name='seconds' min='0' max='60' size='2'
-                                      @include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds'])>
+                            @include('modules.displayvalue', ['type'=>'number', 'source'=>'seconds'])>
                 </label></div>
 
             <div class='elForm'>Target Mile Pace:&nbsp;
                 <label>Minutes <input type='number' name='targetmin' min='0' max='60' size='2'
-                                      @include('modules.displayvalue', ['type'=>'number', 'source'=>'targetmin'])>
+                            @include('modules.displayvalue', ['type'=>'number', 'source'=>'targetmin'])>
                 </label>
                 <label>Seconds <input type='number' name='targetsec' min='0' max='60' size='2'
-                                      @include('modules.displayvalue', ['type'=>'number', 'source'=>'targetsec'])>
+                            @include('modules.displayvalue', ['type'=>'number', 'source'=>'targetsec'])>
                 </label></div>
 
             <div class='elForm'>
                 <label>When is your race?&nbsp;
                     <input type='text' name='racedate'
-                           @include('modules.displayvalue', ['type'=>'text', 'source'=>'racedate'])>
+                            @include('modules.displayvalue', ['type'=>'text', 'source'=>'racedate'])>
                 </label>
             </div>
 
