@@ -1,9 +1,9 @@
 @if($type=='number')
     value='{{old($source) ?? (isset($source)? session($source):'0') }}'
 @elseif($type=='text')
-    value='{{old($source) ?? (isset($source)? session($source):'YY/MM/DD') }}'
+    value='{{old($source,'YYYY/MM/DD')}}'
 @elseif($type=='select')
-    @if(session($source) == $value || old($source) == $value)checked @endif
+    {{ old($source, session($source)) == $value ? 'selected' : '' }}
 @elseif($type=='radio')
-    @if(session($source) == $value || old($source) == $value)checked @endif
+    {{ old($source, session($source)) == $value ? 'checked' : '' }}
 @endif
