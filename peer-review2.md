@@ -15,7 +15,8 @@
 
 ## 2. Functional testing
 
-+ Tested in Safari. Date shows up as Text.. I used a date as well with similar issues 
++ Tested in Safari. Date shows up as Text.. I used a date as well with similar issues
++ In Chrome, calendar works. 
 + No indication of required fields, submitted with no data entered
   * Validation appeared below each field to indicate that it was required.
   * Completed all required fields. Result displayed below the form.
@@ -37,5 +38,5 @@
 
 ## 6. Misc
 + Very clean and straightforward
-+ Vode was easy to read and understand.
++ Code was easy to read and understand.
   
